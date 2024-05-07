@@ -25,6 +25,10 @@ jobs:
         pip3 install pyYAML requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
+    - name: Install tqdm
+      run: |
+        pip install tqdm
+
     - name: Collect Subscribe
       id: collect
       run: |
