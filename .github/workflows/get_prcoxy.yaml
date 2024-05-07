@@ -24,12 +24,12 @@ jobs:
       run: |
         pip3 install pyYAML requests
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
+        
     - name: Collect Subscribe
       id: collect
       run: |
         cd aggregate
-        python -u subscribe/collect.py -s
+        python -u subscribe/collect.py --skip
       
     - name: Create/Update Gist
       env:
